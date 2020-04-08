@@ -8,7 +8,7 @@ import spock.lang.Unroll
 
 class DigestAuthenticationSpec extends BaseSpec{
     @Unroll
-    def 'Digest Authentication Spec'(){
+    def 'Digest Authentication Geb Spec'(){
         when:
         go UrlProvider.getAdress(UrlEnum.DIGEST_AUTHENTICATION)
         then:

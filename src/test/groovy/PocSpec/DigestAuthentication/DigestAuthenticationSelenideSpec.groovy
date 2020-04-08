@@ -13,14 +13,13 @@ class DigestAuthenticationSelenideSpec extends Specification {
     static String username = "admin"
     static String password = "admin"
 
-
     @Unroll
-    def 'test'() {
+    def 'Digest Authentication Selenide Spec'() {
         when:
-        DigestAuthenticationSelenidePage page = open(UrlProvider.getAdress(UrlEnum.DIGEST_AUTHENTICATION),
-                AuthenticationType.DIGEST,
+        open(UrlProvider.getAdress(UrlEnum.DIGEST_AUTHENTICATION),
+                AuthenticationType.BASIC,
                 username, password)
         then:
-        page.isDisplayed()
+        new DigestAuthenticationSelenidePage().isDisplayed()
     }
 }

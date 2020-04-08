@@ -1,15 +1,14 @@
 package PoC.DigestAuthentication
 
+import static com.codeborne.selenide.Selectors.*
+import static com.codeborne.selenide.Selenide.$
 import com.codeborne.selenide.SelenideElement
-import org.openqa.selenium.support.FindBy
 
 class DigestAuthenticationSelenidePage {
 
-    @FindBy(id = "#content")
-    SelenideElement element
+    SelenideElement element= $(byId("content"))
 
-    @FindBy(id = "#page-footer")
-    SelenideElement footer
+    SelenideElement footer = $(byId("page-footer"))
 
     boolean isDisplayed() {
         [element, footer].every { x -> x.displayed }
