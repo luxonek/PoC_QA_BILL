@@ -1,5 +1,6 @@
 package PocSpec.DigestAuthentication
 
+import PoC.DigestAuthentication.DigestAuthenticationGebPage
 import PoC.URL.UrlEnum
 import PoC.URL.UrlProvider
 import PocSpec.BaseSpec
@@ -10,8 +11,7 @@ class DigestAuthenticationSpec extends BaseSpec{
     def 'Digest Authentication Spec'(){
         when:
         go UrlProvider.getAdress(UrlEnum.DIGEST_AUTHENTICATION)
-        int a = 2
         then:
-        assert a==a
+        at(DigestAuthenticationGebPage)
     }
 }
