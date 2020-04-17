@@ -1,14 +1,14 @@
 package PoC.DigestAuthentication
 
-import static com.codeborne.selenide.Selectors.*
-import static com.codeborne.selenide.Selenide.$
 import com.codeborne.selenide.SelenideElement
+
+import static com.codeborne.selenide.Selenide.$
 
 class DigestAuthenticationSelenidePage {
 
-    SelenideElement element= $(byId("content"))
+    SelenideElement element = $("#content")
 
-    SelenideElement footer = $(byId("page-footer"))
+    SelenideElement footer = $("#page-footer")
 
     boolean isDisplayed() {
         [element, footer].every { x -> x.displayed }

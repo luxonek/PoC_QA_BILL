@@ -8,7 +8,7 @@ class DigestAuthenticationGebPage extends Page {
 
     def login(String username = this.username, String password = this.password) {
         driver.get(driver.getCurrentUrl().replace("https://", "https://$username:$password@"))
-        true
+        return true
     }
 
     static content = {
