@@ -1,6 +1,7 @@
 package PoC.URL
 
 enum UrlEnum {
+    ADD_REMOVE_ELEMENTS,
     DIGEST_AUTHENTICATION,
     CONTEXTMENU,
 }
